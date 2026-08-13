@@ -1,0 +1,168 @@
+@font-face {
+    font-family: 'Syne';
+    src: url('./fonts/Syne-Bold.woff2') format('woff2'),
+         url('./fonts/Syne-Bold.ttf') format('truetype');
+    font-weight: 700 800;
+    font-style: normal;
+    font-display: swap; /* Ускоряет отображение текста до загрузки шрифта */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-grid {
+    position: absolute;
+    inset: 0;
+    opacity: 0.1;
+    background-image: radial-gradient(#fff 1px, transparent 1px);
+    background-size: 24px 24px;
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.hero-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 3.75rem;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    padding-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-subtitle {
+    font-family: monospace;
+    font-size: 0.875rem;
+    color: #a1a1aa;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.75rem;
+}
+
+/* Sections */
+.section {
+    position: relative;
+    width: 100%;
+    max-width: 56rem;
+    padding: 8rem 1.5rem;
+}
+
+.section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.section-text {
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+    color: #d4d4d8;
+    max-width: 36rem;
+    margin-bottom: 2rem;
+    line-height: 1.625;
+}
+
+/* Lists */
+.project-list, .contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-family: monospace;
+    font-size: 1.125rem;
+    color: #e4e4e7;
+    list-style: none;
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #fff;
+    border-radius: 9999px;
+    flex-shrink: 0;
+}
+
+.dot-muted { background-color: #52525b; }
+.text-muted { color: #71717a; }
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 28rem;
+    border-bottom: 1px solid #27272a;
+    padding-bottom: 0.5rem;
+    color: #e4e4e7;
+    text-decoration: none;
+    transition: color 0.15s, border-color 0.15s;
+}
+
+.contact-link:hover {
+    border-color: #fff;
+    color: #fff;
+}
+
+.response-time {
+    font-size: 0.875rem;
+    color: #71717a;
+}
+
+.footer {
+    width: 100%;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: #52525b;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .hero-title { font-size: 6rem; }
+    .hero-subtitle { font-size: 1rem; }
+    .section-title { font-size: 4.5rem; }
+    .section-text { font-size: 1.125rem; }
+    .project-list, .contact-list { font-size: 1.25rem; }
+}
