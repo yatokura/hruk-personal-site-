@@ -1,12 +1,13 @@
-<!--
+/*
 Copyright (C) 2026 yatokura
 This file is distributed under the license GNU GPLv3.
 For the full text of the license, see the file LICENSE.
--->
+*/
+
 @font-face {
     font-family: 'Syne';
     src: url('./fonts/Syne-Bold.woff2') format('woff2'),
-         url('./fonts/Syne-Bold.ttf') format('truetype');
+         url('./fonts/Syne-Bold.woff2') format('truetype');
     font-weight: 700 800;
     font-style: normal;
     font-display: swap;
@@ -161,6 +162,15 @@ body {
     font-family: monospace;
     font-size: 0.75rem;
     color: #52525b;
+}
+
+.footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #a1a1aa;
 }
 
 /* Responsive */
